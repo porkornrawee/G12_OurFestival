@@ -7,18 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="register-container">
-    <h2>register</h2>
-    <form action="Boothdirectorypage.html" method="post">
+  <div class="form-container">
+    <h1>ลงทะเบียนร่วมงาน</h1>
+    <h4>กรุณากรอกข้อมูลสำหรับเข้าร่วม Our Festival</h4>
+    <form id="registerForm">
+        <div class="form-group">
+          <label for="name">ชื่อ-สกุล</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-      <label for="username">username</label>
-      <input type="text" id="username" name="username" required>
+        <div class="form-group">
+          <label for="email">อีเมล</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="ticket">ประเภทตั๋ว</label>
+          <select id="ticket" name="ticket" required>
+            <option value="">-- ประเภทตั๋ว --</option>
+            <option value="normal">General (ฟรี)</option>
+            <option value="vip">VIP (100 บาท)</option>
+          </select>
+        </div>
 
-      <label for="password">password</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit">register</button>
+      <button type="submit">Send</button>
     </form>
+
+    <p id="successMessage" class="success-message" style="display:none;">
+      ลงทะเบียนเรียบร้อย! กำลังพาไปยังหน้าหลัก 😊
+    </p>
   </div>
+  <script src="script.js"></script>
 </body>
+<footer>
+        <p>2025 Festival • ... •</p>
+</footer>
 </html>
