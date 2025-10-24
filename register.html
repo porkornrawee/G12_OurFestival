@@ -29,19 +29,24 @@
 
         <div class="form-group">
           <label for="email">อีเมล</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">เบอร์โทรศัพท์</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="08xxxxxxxx" >
         </div>
       
         <div class="form-group">
           <label for="ticket">ประเภทตั๋ว</label>
           <select id="ticket" name="ticket" required>
-            <option value="">-- ประเภทตั๋ว --</option>
+            <option value="" disabled selected>-- ประเภทตั๋ว --</option> 
             <option value="normal">General (ฟรี)</option>
             <option value="vip">VIP (100 บาท)</option>
           </select>
         </div>
 
-      <button type="submit">Send</button>
+      <button type="submit">ลงทะเบียน</button>
     </form>
 
     <p id="successMessage" class="success-message" style="display:none;">
