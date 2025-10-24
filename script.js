@@ -9,14 +9,14 @@ form.addEventListener("submit", function(e) {
 });
 
 function toggleReadMore() {
-            var moreText = document.getElementById("moreText");
-            var btnText = document.getElementById("readMoreBtn");
+    var moreText = document.getElementById("moreText");
+    var btnText = document.getElementById("readMoreBtn");
 
-            if (moreText.style.display === "none") {
-                moreText.style.display = "inline";
-                btnText.innerHTML = "ย่อ";
-            } else {
-                moreText.style.display = "none";
-                btnText.innerHTML = "อ่านเพิ่มเติม";
-            }
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline"; 
+        btnText.innerHTML = "ย่อ";
+    } else {
+        moreText.style.display = "none"; 
+        btnText.innerHTML = "อ่านเพิ่มเติม";
+    }
 }
