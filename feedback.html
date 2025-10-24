@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback | Festival Name</title>
+    <title>Feedback</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,13 +18,43 @@
             </ul>
         </nav>
     </header>
+    <div class="form-container">
+        <h2 class="feedback-title">ความคิดเห็น</h2>
 
+            <div class="rating-section">
+            <label class="rating-title">ให้คะแนน</label>
+                <div class="rating">
+                    <label>
+                        <input type="radio" name="rate" value="5">
+                        <span>5</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="rate" value="4">
+                        <span>4</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="rate" value="3">
+                        <span>3</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="rate" value="2">
+                        <span>2</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="rate" value="1">
+                        <span>1</span>
+                    </label>
+                </div>
+            </div>
 
+        <label class="feedback-label">ความคิดเห็น</label>
+        <textarea class="textbox" placeholder="พิมพ์ข้อความที่นี่..."></textarea>
 
-
-
+        <button class="send-btn">send</button>
+    </div>
     <footer>
         <p>&copy; 2025 Our Festival.  All rights reserved.</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>

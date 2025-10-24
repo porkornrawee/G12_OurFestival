@@ -20,3 +20,10 @@ function toggleReadMore() {
         btnText.innerHTML = "อ่านเพิ่มเติม";
     }
 }
+const ratingLabels = document.querySelectorAll('.rating label');
+ratingLabels.forEach(label => {
+      label.addEventListener('click', () => {
+        ratingLabels.forEach(l => l.classList.remove('active'));
+        label.classList.add('active');
+      });
+});

@@ -173,7 +173,7 @@ a#readMoreBtn {
 
 .home-box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    grid-template-columns: repeat(5, minmax(150px, 1fr)); 
     gap: 20px;
     padding: 20px 50px 50px 50px;
 }
@@ -415,4 +415,113 @@ footer {
     .home-title {
         font-size: 40px;
     }
+}
+
+/*feedback*/
+
+.form-container {
+    width: 400px;
+    margin: auto;
+    color: #444;
+}
+
+.feedback-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.rating-section {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.rating-title {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    max-width: 380px;
+}
+
+.rating label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: #3B82F6;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.rating input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rating input:checked + span::before {
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+}
+
+.rating span {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.rating span::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #3B82F6;
+    border-radius: 50%;
+    margin-bottom: 6px;
+    display: block;
+    transition: 0.2s;
+}
+
+.feedback-label {
+    color: #3B82F6;
+}
+
+.textbox {
+    width: 90%;
+    height: 120px;
+    border: 1px solid #3B82F6;
+    border-radius: 6px;
+    background: transparent;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    resize: none;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.send-btn {
+    width: 90%;
+    padding: 15px 10px;
+    background-color: #3B82F6;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500; 
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn:hover {
+  background-color: #1D4ED8;
 }
