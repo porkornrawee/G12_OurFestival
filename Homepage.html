@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body-homepage">
     <header class="festival-header">
         <div class="logo">Festival name</div>
         <nav class="main-nav">
@@ -18,12 +18,92 @@
             </ul>
         </nav>
     </header>
+<main class="home-main">
+    <section class="home-section-wrapper">
+        <div class="home-section">
+            <p class="home-news">NEWS</p>
+            <h2 class="home-title">Festival name</h2>
+            <p class="home-history">รายละเอียด (history)<span id="moreText" style="display: none;">
+            เทศกาลของกินต้อนรับฮาโลวีนกลับมาอีกครั้ง พร้อมเสิร์ฟความอร่อยและความหลอนในบรรยากาศสุดแฟนตาซี ภายในงานเต็มไปด้วยเมนูสุดครีเอท เช่น คัพเค้กผีตาโต
+            พายฟักทองแม่มด และน้ำผลไม้เลือดแวมไพร์สุดฮิต! ร้านค้าต่างแต่งสไตล์หลอนน่ารัก ให้คุณได้ถ่ายรูปลงโซเชียลแบบไม่ซ้ำใคร เสียงเพลงธีมฮาโลวีนและกลิ่นขนมอบหอมๆ
+            ชวนให้ทุกคนหลุดเข้าโลกแห่งเวทมนตร์ ทั้งเด็กและผู้ใหญ่ต่างพากันแต่งชุดแฟนซี มาสนุกกับกิจกรรม Trick or Treat กันอย่างคึกคัก อย่าลืมเตรียมท้องว่าง 
+            แล้วมาสัมผัสเทศกาลของกินสุดหลอนแสนอร่อยนี้ด้วยตัวคุณเอง 
+            </span>
+            <a href="javascript:void(0);" id="readMoreBtn" onclick="toggleReadMore()">อ่านเพิ่มเติม</a>
+            </p>
+            <a href="Boothdirectorypage.html" class="home-button">Explore All Booths</a>
+        </div>
+    </section>
 
+    <section class="wrapper">
+        <section class="image-gallery">
+            <img src="resource/" alt="Festival image 1" class="home-image">
+        </section>
+    </section>
 
+    <section class="wrapper">
+        <section class="image-gallery">
+            <img src="resource/" alt="Festival image 2" class="home-image">
+        </section>
+    </section>
 
+    <div class="feeling">feeling ร้าน</div>
 
-</body>
+    <section class="wrapper">
+        <section class="image-gallery">
+            <img src="resource/" alt="Festival image 3" class="home-image">
+            <img src="resource/" alt="Festival image 4" class="home-image">
+            <img src="resource/" alt="Festival image 5" class="home-image">
+        </section>
+    </section>
+
+    <h2 class="member">สมาชิกทีม</h2>
+    <div class="home-box-container">
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+        <div class="home-box">
+            <p>Name :</p>
+            <p>บทบาท :</p>
+        </div>
+    </div>
+</main>
     <footer>
         <p>2025 Festival • ... •</p>
     </footer>
+<script src="script.js"></script>
+</body>
 </html>

@@ -1,6 +1,17 @@
-/*header css*/
+/*body*/
 
-body {
+.body-homepage {
+    margin: 0;
+    font-family: 'Mali' sans-serif;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, transparent 99%, rgba(0, 0, 0, 0.1) 100%);
+    background-size: 100% 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-register {
     margin: 0;
     font-family: 'Mali' sans-serif;
     background-color: #ffffff;
@@ -10,8 +21,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+
+/*header css*/
 
 .festival-header {  
     display: flex;
@@ -21,7 +34,6 @@ body {
     border-bottom: 2px solid #333;
     width: 100%;
     box-sizing: border-box;
-    position: fixed;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -29,7 +41,7 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 24px;
     font-weight: bold;
     color: #333;
 }
@@ -45,7 +57,7 @@ body {
 .main-nav a {
     text-decoration: none;
     color: #e60000;
-    font-size: 1.2em;
+    font-size: 19.2px;
     padding: 5px 0;
     transition: color 0.3s;
 }
@@ -54,28 +66,169 @@ body {
     color: #ff3333;
 }
 
+/*Homepage css*/
+
+.home-main {
+    flex: 1;
+}
+
+.home-section-wrapper {
+    width: 100%; 
+    box-sizing: border-box;
+    border-bottom: 2px solid #333; 
+    padding-top: 25px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.wrapper {
+    width: 100%; 
+    box-sizing: border-box;
+    border-bottom: 2px solid #333; 
+    padding-bottom: 0px;
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+}
+
+.home-news {
+    font-size: 19.2px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.home-title {
+    font-size: 56px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.home-history {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+a#readMoreBtn {
+    font-size: 18px;
+    color: #ff3333;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.home-button {
+    text-decoration: none;
+    color: #e60000;
+    border: 2px solid #e60000;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 17.6px;
+    font-weight: bold;  
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #e60000;
+    color: white;
+}
+
+.image-gallery {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 75px;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.home-image {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black;
+    margin-left: 0;
+}
+
+.feeling {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.member {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.home-box-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.home-box {
+    width: 150px;
+    height: 80px;
+    border: 1.5px solid #000;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    padding: 6px 10px;
+}
+
+.home-box p {
+    margin: 4px 0;
+    font-size: 13px;
+}
 /*register css*/
 
 .form-container {
-  background: white;
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 350px;
-  text-align: center;
-  margin-top: 120px;
-  margin-bottom: 80px;
-  flex-shrink: 0;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    flex-shrink: 0;
 }
 
-h1 {
+.register-h1 {
     margin-bottom: 20px;
     color: #333;
 }
-h4 {
+.register-h4 {
     margin-top: -10px;
     margin-bottom: 20px;
-    color: #666;
+    color: #000000;
     font-weight: normal;
 }
 
@@ -124,15 +277,12 @@ button:hover {
   font-weight: bold;
 }
 
+/*footer*/
+
 footer {
   width: 100%;
   background-color: #bebebe;
   text-align: center;
   padding: 10px 0;
   color: #555;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  flex-shrink: 0;
 }
