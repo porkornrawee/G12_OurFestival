@@ -1,12 +1,60 @@
-/*register css*/
+/*header css*/
+
 body {
-  font-family: 'Prompt', sans-serif;
-  background-color: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    margin: 0;
+    font-family: 'Mali' sans-serif;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, transparent 99%, rgba(0, 0, 0, 0.1) 100%);
+    background-size: 100% 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.festival-header {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 2px solid #333;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #e60000;
+    font-size: 1.2em;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ff3333;
+}
+
+/*register css*/
 
 .form-container {
   background: white;
@@ -15,11 +63,20 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   width: 350px;
   text-align: center;
+  margin-top: 120px;
+  margin-bottom: 80px;
+  flex-shrink: 0;
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #333;
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+h4 {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #666;
+    font-weight: normal;
 }
 
 .form-group {
@@ -39,6 +96,7 @@ input, select {
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 button {
@@ -50,6 +108,7 @@ button {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 button:hover {
@@ -62,15 +121,18 @@ button:hover {
   background: #ffe9f0;
   border-radius: 10px;
   padding: 10px;
+  font-weight: bold;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #bebebe;
   text-align: center;
   padding: 10px 0;
   color: #555;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  flex-shrink: 0;
 }

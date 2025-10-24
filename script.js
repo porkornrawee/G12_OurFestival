@@ -5,5 +5,5 @@ form.addEventListener("submit", function(e) {
     e.preventDefault();
     message.style.display = "block";
     form.reset();
-    setTimeout(() => window.location.href = "BoothDirectoryPage.html", 3000);
+    setTimeout(() => window.location.href = "Homepage.html", 3000);
 });
