@@ -9,7 +9,8 @@
 <body>
     <header class="festival-header">
         <div class="logo">Festival name</div>
-        <nav class="main-nav">
+        
+        <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="Homepage.html">Home</a></li>
                 <li><a href="Boothdirectorypage.html">Booths</a></li>
@@ -17,7 +18,14 @@
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </nav>
+
+        <button class="hamburger-menu" id="hamburgerToggle" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </header>
+    
     <div class="form-container">
         <h2 class="feedback-title">ความคิดเห็น</h2>
 

@@ -5,7 +5,7 @@
     --text-dark: #1F2937;
     --text-light: #4B5563;
     --background-light: #FFFFFF;
-    --border-color: #e7e9eb;  
+    --border-color: #e7e9eb; 
     --font-base: 'Mali', sans-serif;
 }
 
@@ -31,35 +31,93 @@ body {
     box-sizing: border-box;
     background-color: white;
     z-index: 1000;
+    position: relative;
 }
 
 .logo {
     font-size: 26px;
     font-weight: 700;
     color: var(--text-dark); 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.hamburger-menu {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002;
+    margin-right: auto;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 5px 0;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), 
+                opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger-menu.is-active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.is-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.is-active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .main-nav ul {
     list-style: none;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    
+    position: absolute;
+    top: 77px; 
+    left: 0;
+    width: 250px;
+    
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 6px 6px;
+    z-index: 1001;
+
+    transform: translateX(-110%);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.main-nav.nav-open ul {
+    transform: translateX(0);
 }
 
 .main-nav a {
     text-decoration: none;
     color: var(--text-light); 
     font-size: 18px;
-    padding: 5px 0;
-    transition: color 0.3s;
     font-weight: 500;
+    
+    display: block;
+    padding: 12px 30px;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .main-nav a:hover,
 .main-nav a.active { 
     color: var(--primary-color); 
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: none;
+    background-color: #f6f7f8;
 }
 
 
@@ -390,15 +448,6 @@ footer {
 
 @media (max-width: 768px) {
     
-    .festival-header {
-        padding: 15px 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-    .main-nav ul {
-        gap: 15px;
-        margin-top: 10px;
-    }
     .home-section-wrapper, .wrapper, .booth-content-wrapper, .home-box-container {
         padding-left: 20px;
         padding-right: 20px;
@@ -416,8 +465,6 @@ footer {
         font-size: 40px;
     }
 }
-
-/*feedback*/
 
 .form-container {
     width: 400px;
@@ -523,10 +570,9 @@ footer {
 }
 
 .send-btn:hover {
-  background-color: #1D4ED8;
+ background-color: #1D4ED8;
 }
 
-/* ตกแต่ง boothpage1-4 */
 .detail-content-wrapper {
     flex: 1; 
     padding: 40px 50px 80px 50px; 

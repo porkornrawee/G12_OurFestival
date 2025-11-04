@@ -9,7 +9,8 @@
 <body class="body-booth-detail">
     <header class="festival-header">
         <div class="logo">Festival name</div>
-        <nav class="main-nav">
+        
+        <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a href="Homepage.html">Home</a></li>
                 <li><a href="Boothdirectorypage.html">Booths</a></li>
@@ -17,8 +18,14 @@
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </nav>
-    </header>
 
+        <button class="hamburger-menu" id="hamburgerToggle" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+    
     <div class="detail-content-wrapper">
         
         <h1 class="booth-detail-name">(ชื่อร้าน3)</h1>
@@ -66,5 +73,6 @@
     <footer>
         <p>&copy; 2025 Festival name. All rights reserved.</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>

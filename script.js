@@ -1,12 +1,14 @@
 const form = document.getElementById("registerForm");
 const message = document.getElementById("successMessage");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    message.style.display = "block";
-    form.reset();
-    setTimeout(() => window.location.href = "Homepage.html", 3000);
-});
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        message.style.display = "block";
+        form.reset();
+        setTimeout(() => window.location.href = "Homepage.html", 3000);
+    });
+}
 
 function toggleReadMore() {
     var moreText = document.getElementById("moreText");
@@ -26,4 +28,28 @@ ratingLabels.forEach(label => {
         ratingLabels.forEach(l => l.classList.remove('active'));
         label.classList.add('active');
       });
+});
+
+const hamburgerToggle = document.getElementById("hamburgerToggle");
+const mainNav = document.getElementById("mainNav");
+
+hamburgerToggle.addEventListener("click", function() {
+    hamburgerToggle.classList.toggle("is-active");
+    mainNav.classList.toggle("nav-open");
+
+    const isExpanded = hamburgerToggle.getAttribute("aria-expanded") === "true";
+    hamburgerToggle.setAttribute("aria-expanded", !isExpanded);
+});
+
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = mainNav.contains(event.target);
+    const isClickOnToggle = hamburgerToggle.contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnToggle) {
+        if (mainNav.classList.contains('nav-open')) {
+            mainNav.classList.remove('nav-open');
+            hamburgerToggle.classList.remove('is-active');
+            hamburgerToggle.setAttribute('aria-expanded', 'false');
+        }
+    }
 });
