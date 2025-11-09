@@ -653,3 +653,13 @@ footer {
     font-weight: 600;
     margin: 5px 0 0 0;
 }
+
+.movie-image {
+    width: 105%;
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #eee;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+}
