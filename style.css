@@ -200,11 +200,13 @@ a#readMoreBtn {
     gap: 20px;
     padding: 0 50px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-image {
-    width: 200px; 
-    height: 150px;
+    width: 400px; 
+    height: 300px;
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
