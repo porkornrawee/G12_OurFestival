@@ -627,15 +627,26 @@ footer {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
+.product-figure {
+    width: 100%;
+    aspect-ratio: 3 / 4; 
+    overflow: hidden;
+    display: flex;         
+    justify-content: center;   
+    align-items: center;       
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0; 
+}
+
 .product-image {
     width: 100%;
-    height: 300px; 
-    object-fit: cover;
-    border-radius: 4px;
-    background-color: #eee;
-    margin-bottom: 15px;
-    border: 1px solid var(--border-color);
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
 }
+
+
 
 .product-info {
     border-top: 1px solid var(--border-color);
