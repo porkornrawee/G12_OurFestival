@@ -1,0 +1,898 @@
+:root {
+  --bg-1: #0b0b10;
+  --bg-2: #1a0f2f;
+  --accent: #ff7a18;
+  --accent-2: #ffb86b;
+  --muted: #bfb8c7;
+  --spider-img: url('https://i.imgur.com/6pQXKXW.png');
+  --bats-img: url('https://i.imgur.com/7wH7f6W.png');
+  --pumpkin-img: url('https://i.imgur.com/hWmTc0V.png');
+}
+
+body.halloween-2022 {
+  margin: 0;
+  font-family: 'Kanit', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  color: var(--muted);
+  background: 
+    radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.halloween-2022::before,
+body.halloween-2022::after {
+  content: "";
+  position: absolute;
+  left: -10%; right: -10%; top: -10%; bottom: -10%;
+  pointer-events: none;
+  opacity: .25;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+body.halloween-2022::before {
+  background-image: radial-gradient(circle at 20% 30%, rgba(255,120,30,.06), transparent 10%),
+                    radial-gradient(circle at 80% 70%, rgba(160,60,160,.06), transparent 10%);
+  animation: slowDrift 20s linear infinite;
+}
+
+body.halloween-2022::after {
+  background-image: linear-gradient(90deg, rgba(255,255,255,.02), rgba(0,0,0,.02));
+  animation: slowDrift 28s linear infinite reverse;
+}
+
+@keyframes slowDrift {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-3%); }
+  100% { transform: translateY(0); }
+}
+
+/* Header & Navigation */
+.festival-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  font-size: 28px;
+  color: var(--accent-2);
+  text-shadow: 0 0 12px rgba(255,120,24,.4);
+  font-weight: 700;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: .18s;
+}
+
+.main-nav a:hover {
+  color: var(--accent-2);
+  text-shadow: 0 0 12px rgba(255,180,80,.28);
+}
+
+/* Home Section */
+.home-section {
+  max-width: 760px;
+  margin: 70px auto 40px auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.home-news {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.home-title {
+  font-size: 52px;
+  color: var(--accent-2);
+  text-shadow: 0 6px 30px rgba(255,80,10,.12);
+  margin: 6px 0;
+}
+
+.home-history {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.home-history a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.home-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #111;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255,120,24,.18);
+  transition: transform .18s, filter .18s;
+}
+
+.home-button:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.05);
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+  z-index: 5;
+  position: relative;
+}
+
+.home-image {
+  width: 320px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.55);
+  transition: transform .3s;
+  cursor: pointer;
+}
+
+.home-image:hover {
+  transform: scale(1.05);
+}
+
+/* Effects & Decorations */
+.spiderweb-layer {
+  position: fixed;
+  pointer-events: none;
+  opacity: .24;
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.spiderweb-1 { top:8px; left:8px; width:220px; height:220px; background-image: var(--spider-img); }
+.spiderweb-2 { top:8px; right:12px; width:160px; height:160px; background-image: var(--spider-img); transform: scale(.9) rotate(12deg); }
+.spiderweb-3 { bottom:14px; left:12px; width:180px; height:180px; background-image: var(--spider-img); transform: rotate(-6deg); }
+.spiderweb-4 { bottom:12px; right:12px; width:140px; height:140px; background-image: var(--spider-img); opacity:.18; transform: scale(.9); }
+
+.bat {
+  position: fixed;
+  top: 20%;
+  left: -10%;
+  width: 64px;
+  height: 40px;
+  background-image: var(--bats-img);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 7;
+  pointer-events: none;
+  opacity: .95;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes batFlyX { 0%{transform:translateX(-120vw) translateY(0) scaleX(-1);} 50%{transform:translateX(20vw) translateY(-8vh) scaleX(1);} 100%{transform:translateX(120vw) translateY(4vh) scaleX(1);} }
+@keyframes batFlap { 0%{transform:scaleY(1);} 50%{transform:scaleY(.9);} 100%{transform:scaleY(1);} }
+
+.pumpkin-glow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  background-image: var(--pumpkin-img);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 8;
+  pointer-events: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+  animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+@keyframes pumpBreathe { 0%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-8px) rotate(2deg);} 100%{transform:translateY(0) rotate(-2deg);} }
+
+.pumpkin-glow:hover {
+  filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+  transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .home-image { width: 92%; }
+  .spiderweb-1 { width: 140px; height: 140px; }
+  .spiderweb-2, .spiderweb-4 { display: none; }
+  .pumpkin-glow { width: 92px; height: 92px; right: 12px; bottom: 12px; }
+}
+/* Scope สำหรับหน้า Booth Directory */
+body.body-booth-directory.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-booth-directory.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-booth-directory.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Navigation */
+body.body-booth-directory.halloween-2022 .main-nav a {
+    color: var(--muted);
+}
+
+body.body-booth-directory.halloween-2022 .main-nav a:hover {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,180,80,.28);
+}
+
+/* Booth Title & Subtitle */
+body.body-booth-directory.halloween-2022 .title,
+body.body-booth-directory.halloween-2022 .subtitle {
+    color: var(--accent-2);
+    text-shadow: 0 4px 20px rgba(255,80,10,.12);
+}
+
+/* Booth Group Titles */
+body.body-booth-directory.halloween-2022 .group-title {
+    color: var(--accent);
+    border-left: 5px solid var(--accent-2);
+    padding-left: 10px;
+}
+
+/* Booth Cards */
+body.body-booth-directory.halloween-2022 .booth-item {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    transition: transform .18s, box-shadow .18s;
+    cursor: pointer;
+}
+
+body.body-booth-directory.halloween-2022 .booth-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+/* Booth Names & Buttons */
+body.body-booth-directory.halloween-2022 .booth-name {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+body.body-booth-directory.halloween-2022 .booth-view-btn {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #111;
+    font-weight: 700;
+    border: none;
+    transition: transform .18s, filter .18s;
+}
+
+body.body-booth-directory.halloween-2022 .booth-view-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* Group Divider */
+body.body-booth-directory.halloween-2022 .group-divider {
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin: 40px 0;
+}
+
+/* Pumpkin Glow Effect */
+body.body-booth-directory.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-booth-directory.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+/* Scope สำหรับหน้า Booth Detail */
+body.body-booth-detail.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-booth-detail.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-booth-detail.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Booth Title */
+body.body-booth-detail.halloween-2022 .booth-detail-name {
+    color: var(--accent-2);
+    text-shadow: 0 6px 30px rgba(255,80,10,.12);
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+body.body-booth-detail.halloween-2022 .section-title {
+    color: var(--accent);
+    border-left: 5px solid var(--accent-2);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Product Gallery */
+body.body-booth-detail.halloween-2022 .product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Items */
+body.body-booth-detail.halloween-2022 .product-item {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    transition: transform .18s, box-shadow .18s;
+    cursor: pointer;
+}
+
+body.body-booth-detail.halloween-2022 .product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+/* Product Names & Prices */
+body.body-booth-detail.halloween-2022 .product-name {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+body.body-booth-detail.halloween-2022 .product-price {
+    color: var(--accent-2);
+    font-weight: 600;
+}
+
+/* Pumpkin Glow Effect */
+body.body-booth-detail.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-booth-detail.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+/* Scope สำหรับหน้า Booth Detail (Blood Drink) */
+body.body-booth-detail.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-booth-detail.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-booth-detail.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Booth Title */
+body.body-booth-detail.halloween-2022 .booth-detail-name {
+    color: var(--accent-2);
+    text-shadow: 0 6px 30px rgba(255,80,10,.12);
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+body.body-booth-detail.halloween-2022 .section-title {
+    color: var(--accent);
+    border-left: 5px solid var(--accent-2);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Product Gallery */
+body.body-booth-detail.halloween-2022 .product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Items */
+body.body-booth-detail.halloween-2022 .product-item {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    transition: transform .18s, box-shadow .18s;
+    cursor: pointer;
+}
+
+body.body-booth-detail.halloween-2022 .product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+/* Product Names & Prices */
+body.body-booth-detail.halloween-2022 .product-name {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+body.body-booth-detail.halloween-2022 .product-price {
+    color: var(--accent-2);
+    font-weight: 600;
+}
+
+/* Pumpkin Glow Effect */
+body.body-booth-detail.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-booth-detail.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+/* Scope สำหรับหน้า Boothpage3 (Spooky Tricky) */
+body.body-booth-detail.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-booth-detail.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-booth-detail.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Booth Title */
+body.body-booth-detail.halloween-2022 .booth-detail-name {
+    color: var(--accent-2);
+    text-shadow: 0 6px 30px rgba(255,80,10,.12);
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+body.body-booth-detail.halloween-2022 .section-title {
+    color: var(--accent);
+    border-left: 5px solid var(--accent-2);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Product Gallery */
+body.body-booth-detail.halloween-2022 .product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Items */
+body.body-booth-detail.halloween-2022 .product-item {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    transition: transform .18s, box-shadow .18s;
+    cursor: pointer;
+}
+
+body.body-booth-detail.halloween-2022 .product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+/* Product Names & Prices */
+body.body-booth-detail.halloween-2022 .product-name {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+body.body-booth-detail.halloween-2022 .product-price {
+    color: var(--accent-2);
+    font-weight: 600;
+}
+
+/* Pumpkin Glow Effect */
+body.body-booth-detail.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-booth-detail.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+/* Scope สำหรับหน้า Boothpage4 (Pop It Witch) */
+body.body-booth-detail.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-booth-detail.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-booth-detail.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Booth Title */
+body.body-booth-detail.halloween-2022 .booth-detail-name {
+    color: var(--accent-2);
+    text-shadow: 0 6px 30px rgba(255,80,10,.12);
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+body.body-booth-detail.halloween-2022 .section-title {
+    color: var(--accent);
+    border-left: 5px solid var(--accent-2);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Product Gallery */
+body.body-booth-detail.halloween-2022 .product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Items */
+body.body-booth-detail.halloween-2022 .product-item {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    transition: transform .18s, box-shadow .18s;
+    cursor: pointer;
+}
+
+body.body-booth-detail.halloween-2022 .product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+/* Product Names & Prices */
+body.body-booth-detail.halloween-2022 .product-name {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+body.body-booth-detail.halloween-2022 .product-price {
+    color: var(--accent-2);
+    font-weight: 600;
+}
+
+/* Pumpkin Glow Effect */
+body.body-booth-detail.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-booth-detail.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+/* Scope สำหรับหน้า Feedback */
+body.body-feedback.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-feedback.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-feedback.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Form Container */
+body.body-feedback.halloween-2022 .form-container {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    padding: 35px 45px;
+    margin: 50px auto;
+    width: 400px;
+    color: var(--muted);
+}
+
+/* Feedback Title */
+body.body-feedback.halloween-2022 .feedback-title {
+    color: var(--accent-2);
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Rating Section */
+body.body-feedback.halloween-2022 .rating-title {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+body.body-feedback.halloween-2022 .rating span::before {
+    border: 2px solid var(--accent);
+}
+
+body.body-feedback.halloween-2022 .rating input:checked + span::before {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Textbox */
+body.body-feedback.halloween-2022 .textbox {
+    border: 1px solid var(--accent);
+    color: var(--muted);
+    background: rgba(0,0,0,0.05);
+}
+
+/* Send Button */
+body.body-feedback.halloween-2022 .send-btn {
+    background-color: var(--accent);
+    color: #111;
+    font-weight: 700;
+}
+
+body.body-feedback.halloween-2022 .send-btn:hover {
+    background-color: var(--accent-2);
+    filter: brightness(1.1);
+}
+
+/* Footer */
+body.body-feedback.halloween-2022 footer {
+    background: rgba(11,11,16,0.85);
+    color: rgba(255,255,255,.25);
+}
+
+/* Pumpkin Glow Effect */
+body.body-feedback.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-feedback.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
+/* Scope สำหรับหน้า Register */
+body.body-register.halloween-2022 {
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(80,20,90,.25), transparent),
+                linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: var(--muted);
+}
+
+/* Header */
+body.body-register.halloween-2022 .festival-header {
+    background-color: rgba(11,11,16,0.85);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+body.body-register.halloween-2022 .festival-header .logo {
+    color: var(--accent-2);
+    text-shadow: 0 0 12px rgba(255,120,24,.4);
+}
+
+/* Form Container */
+body.body-register.halloween-2022 .form-container {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    padding: 35px 45px;
+    margin: 50px auto;
+    width: 400px;
+    color: var(--muted);
+}
+
+/* Form Titles */
+body.body-register.halloween-2022 .register-h1 {
+    color: var(--accent-2);
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body.body-register.halloween-2022 .register-h4 {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Labels & Inputs */
+body.body-register.halloween-2022 label {
+    color: var(--accent);
+}
+
+body.body-register.halloween-2022 input,
+body.body-register.halloween-2022 select {
+    border: 1px solid var(--accent);
+    background: rgba(0,0,0,0.05);
+    color: var(--muted);
+}
+
+/* Submit Button */
+body.body-register.halloween-2022 button[type="submit"] {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #111;
+    font-weight: 700;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    transition: transform .18s, filter .18s;
+}
+
+body.body-register.halloween-2022 button[type="submit"]:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Success Message */
+body.body-register.halloween-2022 .success-message {
+    background: rgba(255,255,255,.08);
+    border: 1px solid var(--accent-2);
+    color: var(--accent-2);
+}
+
+/* Footer */
+body.body-register.halloween-2022 footer {
+    background: rgba(11,11,16,0.85);
+    color: rgba(255,255,255,.25);
+}
+
+/* Pumpkin Glow Effect */
+body.body-register.halloween-2022 .pumpkin-glow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: var(--pumpkin-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+    pointer-events: auto;
+    cursor: pointer;
+    filter: drop-shadow(0 0 18px rgba(255,120,24,.25));
+    animation: pumpBreathe 3s ease-in-out infinite;
+}
+
+body.body-register.halloween-2022 .pumpkin-glow:hover {
+    filter: drop-shadow(0 0 40px rgba(255,120,24,.6));
+    transform: translateY(-10px) rotate(0deg) scale(1.02);
+}
