@@ -31,10 +31,6 @@ body {
     letter-spacing: 2px; /* ฟอนต์นี้อาจจะต้องเพิ่มระยะห่างตัวอักษรนิดหน่อยให้อ่านง่ายขึ้น */
     font-weight: normal; /* ฟอนต์แฟนซีมักจะหนาอยู่แล้ว อาจไม่ต้องใช้ bold */
 }
-.product {
-    padding-top: 20px;
-    font-size: 20px;
-}
 h1,
 h2,
 h3,
@@ -391,4 +387,12 @@ footer {
         20px 20px 0 rgba(255,255,255,0.2),
         40px 40px 0 rgba(255,255,255,0.15),
         60px 60px 0 rgba(255,255,255,0.12);
+}
+
+@media (max-width: 991px) { 
+    h1.halloween {
+        font-size: 2.5rem !important; 
+        line-height: 1.4 !important;  
+        word-wrap: break-word;       
+    }   
 }
