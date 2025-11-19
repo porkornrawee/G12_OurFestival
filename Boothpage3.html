@@ -1,79 +1,99 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spooky tricky | Hall-o'-ween Party</title>
+    <title>Spooky Tricky | Hall-o'-ween Party</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hall-o-ween.css">
 </head>
-<body class="body-booth-detail halloween-2022">
-    <header class="festival-header">
-        <div class="logo">Hall-o'-ween Party</div>
-        
-        <nav class="main-nav" id="mainNav">
-            <ul>
-                <li><a href="Homepage.html">Home</a></li>
-                <li><a href="Boothdirectorypage.html">Booths</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
 
-        <button class="hamburger-menu" id="hamburgerToggle" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-    </header>
-    
-    <div class="detail-content-wrapper">
-        
-        <h1 class="booth-detail-name">Spooky Tricky</h1>
-        
-        <section class="menu-section">
-            <h2 class="section-title">ภาพยนตร์ที่กำลังฉาย</h2>
-            
-            <div class="product-gallery">
-                
-                <div class="product-item">
-                    <figure class="product-figure">
-                        <img src="img/shop 3.jpg" alt="สินค้า1" class="movie-image">
-                    </figure>
-                    <div class="product-info">
-                        <p class="product-name">Witchnesday</p>
-                        <p class="product-price">ราคา 160 บาท</p>
-                    </div>
-                </div>
+<body>
 
-                <div class="product-item">
-                    <figure class="product-figure">
-                        <img src="img/shop 3pic2.jpg" alt="The conjuring" class="movie-image">
-                    </figure>
-                    <div class="product-info">
-                        <p class="product-name">The Conjuring</p>
-                        <p class="product-price">ราคา 150 บาท</p>
-                    </div>
-                </div>
-                
-                <div class="product-item">
-                    <figure class="product-figure">
-                        <img src="img/shop 3 pic3.jpg" alt="สินค้า3" class="movie-image">
-                    </figure>
-                    <div class="product-info">
-                        <p class="product-name">Zoom Alone</p>
-                        <p class="product-price">ราคา 150 บาท</p>
-                    </div>
-                </div>
-                
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Homepage.html">🎃 Hall-o'-ween</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Boothdirectorypage.html">Booths</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+
+                    <li class="nav-item ms-lg-2 border-start border-secondary d-none d-lg-block"></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_registrations.php">View Users</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_feedbacks.php">View Feedbacks</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-danger btn-sm rounded-pill px-3" href="index.html">
+                            Exit 🚪
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
-        
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5 pb-5">
+        <div class="text-center mb-5 floating-element">
+            <h1 class="display-3 fw-bold text-warning">Spooky Tricky</h1>
+            <p class="text-white-50">ภาพยนตร์ที่กำลังฉาย</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card custom-card h-100 text-center p-3">
+                    <div class="overflow-hidden rounded mb-3">
+                        <img src="img/shop 3.jpg" class="img-fluid w-100" style="height: 400px; object-fit: cover;"
+                            alt="Witchnesday">
+                    </div>
+                    <h4 class="text-warning mb-1">Witchnesday</h4>
+                    <h5 class="text-white fw-bold">160 THB</h5>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card custom-card h-100 text-center p-3">
+                    <div class="overflow-hidden rounded mb-3">
+                        <img src="img/shop 3pic2.jpg" class="img-fluid w-100" style="height: 400px; object-fit: cover;"
+                            alt="The Conjuring">
+                    </div>
+                    <h4 class="text-warning mb-1">The Conjuring</h4>
+                    <h5 class="text-white fw-bold">150 THB</h5>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card custom-card h-100 text-center p-3">
+                    <div class="overflow-hidden rounded mb-3">
+                        <img src="img/shop 3 pic3.jpg" class="img-fluid w-100" style="height: 400px; object-fit: cover;"
+                            alt="Zoom Alone">
+                    </div>
+                    <h4 class="text-warning mb-1">Zoom Alone</h4>
+                    <h5 class="text-white fw-bold">150 THB</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-5 px-md-5">
+            <a href="Boothpage2.html" class="btn btn-outline-halloween rounded-pill px-4">
+                ← ร้านก่อนหน้า (Blood Drink)
+            </a>
+            <a href="Boothpage4.html" class="btn btn-halloween rounded-pill px-4">
+                ร้านถัดไป (Pop It Witch) →
+            </a>
+        </div>
     </div>
 
-    <footer>
+    <footer class="text-center text-white-50">
         <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -5,78 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chick or Cheese | Hall-o'-ween Party</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hall-o-ween.css">
 </head>
 
-<body class="body-booth-detail halloween-2022">
-    <header class="festival-header">
-        <div class="logo">Hall-o'-ween Party</div>
+<body>
 
-        <nav class="main-nav" id="mainNav">
-            <ul>
-                <li><a href="Homepage.html">Home</a></li>
-                <li><a href="Boothdirectorypage.html">Booths</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Homepage.html">🎃 Hall-o'-ween</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Boothdirectorypage.html">Booths</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
 
-        <button class="hamburger-menu" id="hamburgerToggle" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-    </header>
-
-    <div class="detail-content-wrapper">
-
-        <h1 class="booth-detail-name">Chick or Cheese</h1>
-
-        <section class="menu-section">
-            <h2 class="section-title">เมนูในร้านค้า</h2>
-
-            <div class="product-gallery">
-
-                <div class="product-item">
-                    <figure class="product-figure">
-                        <img src="img/ร้าน1สินค้า1.jpg" alt="สินค้า1" class="product-image">
-                    </figure>
-                    <div class="product-info">
-                        <p class="product-name">Pizza</p>
-                        <p class="product-price">ราคา 399 บาท</p>
-                    </div>
-                </div>
-
-                <div class="product-item">
-                    <figure class="product-figure">
-                        <img src="img/ร้าน1สินค้า2.jpg" alt="สินค้า2" class="product-image">
-                    </figure>
-                    <div class="product-info">
-                        <p class="product-name">Chicken</p>
-                        <p class="product-price">ราคา 169 บาท</p>
-                    </div>
-                </div>
-
-                <div class="product-item">
-                    <figure class="product-figure">
-                        <img src="img/ร้าน1สินค้า3.jpg" alt="สินค้า3" class="product-image">
-                    </figure>
-                    <div class="product-info">
-                        <p class="product-name">Burger</p>
-                        <p class="product-price">ราคา 59 บาท</p>
-                    </div>
-                </div>
-
+                    <li class="nav-item ms-lg-2 border-start border-secondary d-none d-lg-block"></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_registrations.php">View Users</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_feedbacks.php">View Feedbacks</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-danger btn-sm rounded-pill px-3" href="index.html">
+                            Exit 🚪
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </nav>
 
+    <div class="container mt-5 pt-5 pb-5">
+        <div class="text-center mb-5 floating-element">
+            <h1 class="display-3 fw-bold text-warning">Chick or Cheese</h1>
+            <p class="text-white-50">เมนูในร้านค้า</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card custom-card h-100 text-center p-3">
+                    <div class="overflow-hidden rounded mb-3">
+                        <img src="img/ร้าน1สินค้า1.jpg" class="img-fluid w-100"
+                            style="height: 250px; object-fit: cover;" alt="Pizza">
+                    </div>
+                    <h4 class="text-warning mb-1">Pizza</h4>
+                    <h5 class="text-white fw-bold">399 THB</h5>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card custom-card h-100 text-center p-3">
+                    <div class="overflow-hidden rounded mb-3">
+                        <img src="img/ร้าน1สินค้า2.jpg" class="img-fluid w-100"
+                            style="height: 250px; object-fit: cover;" alt="Chicken">
+                    </div>
+                    <h4 class="text-warning mb-1">Chicken</h4>
+                    <h5 class="text-white fw-bold">169 THB</h5>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card custom-card h-100 text-center p-3">
+                    <div class="overflow-hidden rounded mb-3">
+                        <img src="img/ร้าน1สินค้า3.jpg" class="img-fluid w-100"
+                            style="height: 250px; object-fit: cover;" alt="Burger">
+                    </div>
+                    <h4 class="text-warning mb-1">Burger</h4>
+                    <h5 class="text-white fw-bold">59 THB</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-5 px-md-5">
+            <a href="Boothpage4.html" class="btn btn-outline-halloween rounded-pill px-4">
+                ← ร้านก่อนหน้า (Pop It Witch)
+            </a>
+            <a href="Boothpage2.html" class="btn btn-halloween rounded-pill px-4">
+                ร้านถัดไป (Blood Drink) →
+            </a>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-
-</html>
+    <footer class="text-center text-white-50">
+        <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p

@@ -1,98 +1,99 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booths | Hall-o'-ween Party</title>
+    <title>Booths Directory | Hall-o'-ween Party</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hall-o-ween.css">
 </head>
-<body class="body-booth-directory halloween-2022">
-    <header class="festival-header">
-        <div class="logo">Hall-o'-ween Party</div>
-        
-        <nav class="main-nav" id="mainNav">
-            <ul>
-                <li><a href="Homepage.html">Home</a></li>
-                <li><a href="Boothdirectorypage.html">Booths</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
 
-        <button class="hamburger-menu" id="hamburgerToggle" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-    </header>
-    
-    <div class="booth-content-wrapper"> 
-        <h1 class="title">Booths</h1>
-        <p class="subtitle">หมวดหมู่ร้านค้าภายในงาน</p>
+<body>
 
-        <section class="booth-group">
-            <h2 class="group-title">อาหารและเครื่องดื่ม</h2>
-            
-            <div class="booth-container">
-                
-                <div class="booth-item">
-                    <figure class="booth-figure">
-                        <img src="img/รูปภาพร้าน1.jpg" alt="รูปภาพร้าน1" class="booth-image">
-                    </figure>
-                    <div class="booth-info">
-                        <h3 class="booth-name">Chick or Cheese</h3>
-                        <a href="Boothpage1.html" class="booth-view-btn">VIEW</a>
-                    </div>
-                </div>
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Homepage.html">🎃 Hall-o'-ween</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Boothdirectorypage.html">Booths</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
 
-                <div class="booth-item">
-                    <figure class="booth-figure">
-                        <img src="img/รูปภาพร้าน2.jpg" alt="รูปภาพร้าน2" class="booth-image">
-                    </figure>
-                    <div class="booth-info">
-                        <h3 class="booth-name">Blood Drink</h3>
-                        <a href="Boothpage2.html" class="booth-view-btn">VIEW</a>
-                    </div>
-                </div>
-
+                    <li class="nav-item ms-lg-2 border-start border-secondary d-none d-lg-block"></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_registrations.php">View Users</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_feedbacks.php">View Feedbacks</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-danger btn-sm rounded-pill px-3" href="index.html">
+                            Exit 🚪
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <hr class="group-divider"> 
+    <div class="container mt-5 pt-5 pb-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold display-4 text-warning">Booths Directory</h1>
+            <p class="lead text-light opacity-75">รวมร้านค้าสุดหลอนภายในงาน</p>
+        </div>
 
-        <section class="booth-group">
-            <h2 class="group-title">ภาพยนตร์และขนม</h2>
-            
-            <div class="booth-container">
-                
-                <div class="booth-item">
-                    <figure class="booth-figure">
-                        <img src="img/รูปภาพร้าน3.jpg" alt="รูปภาพร้าน3" class="booth-image">
-                    </figure>
-                    <div class="booth-info">
-                        <h3 class="booth-name">Spooky Tricky</h3>
-                        <a href="Boothpage3.html" class="booth-view-btn">VIEW</a>
+        <h3 class="border-start border-5 border-warning ps-3 mb-4 text-white">🍖 อาหารและเครื่องดื่ม</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card custom-card h-100">
+                    <img src="img/รูปภาพร้าน1.jpg" class="card-img-top" alt="Chick or Cheese">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h4 class="card-title m-0">Chick or Cheese</h4>
+                        <a href="Boothpage1.html" class="btn btn-outline-halloween">เข้าชมร้าน</a>
                     </div>
                 </div>
-
-                <div class="booth-item">
-                    <figure class="booth-figure">
-                        <img src="img/รูปภาพร้าน4.jpg" alt="รูปภาพร้าน4" class="booth-image">
-                    </figure>
-                    <div class="booth-info">
-                        <h3 class="booth-name">Pop It Witch</h3>
-                        <a href="Boothpage4.html" class="booth-view-btn">VIEW</a>
-                    </div>
-                </div>
-
             </div>
-        </section>
+            <div class="col-md-6">
+                <div class="card custom-card h-100">
+                    <img src="img/รูปภาพร้าน2.jpg" class="card-img-top" alt="Blood Drink">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h4 class="card-title m-0">Blood Drink</h4>
+                        <a href="Boothpage2.html" class="btn btn-outline-halloween">เข้าชมร้าน</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="border-start border-5 border-warning ps-3 mb-4 text-white">🎬 ภาพยนตร์และของเล่น</h3>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card custom-card h-100">
+                    <img src="img/รูปภาพร้าน3.jpg" class="card-img-top" alt="Spooky Tricky">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h4 class="card-title m-0">Spooky Tricky</h4>
+                        <a href="Boothpage3.html" class="btn btn-outline-halloween">เข้าชมร้าน</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card custom-card h-100">
+                    <img src="img/รูปภาพร้าน4.jpg" class="card-img-top" alt="Pop It Witch">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h4 class="card-title m-0">Pop It Witch</h4>
+                        <a href="Boothpage4.html" class="btn btn-outline-halloween">เข้าชมร้าน</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <footer>
+
+    <footer class="text-center text-white-50">
         <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

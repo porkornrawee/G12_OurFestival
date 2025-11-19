@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register | Hall-o'-ween Party</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="hall-o-ween.css">
 </head>
-<body class="body-register halloween-2022">
-    <header class="festival-header">
-        <div class="logo">Hall-o'-ween Party</div>
-        
-        <nav class="main-nav" id="mainNav">
-            <ul>
-                <li><a href="Homepage.html">Home</a></li>
-                <li><a href="Boothdirectorypage.html">Booths</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
-  <div class="form-container">
-    <h1 class="register-h1">ลงทะเบียนร่วมงาน</h1>
-    <h4 class="register-h4">กรุณากรอกข้อมูลสำหรับเข้าร่วม Hall-o'-ween Party</h4>
-    <form id="registerForm">
-        <div class="form-group">
-          <label for="name">ชื่อ-สกุล</label>
-          <input type="text" id="name" name="name" required>
+
+<body>
+
+  <nav class="navbar navbar-dark fixed-top">
+    <div class="container justify-content-center">
+      <a class="navbar-brand">🎃 Register 🎃</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5 pt-5 pb-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card custom-card p-4 p-md-5 shadow-lg" style="width: 100%; max-width: 500px;">
+      <h2 class="text-center text-warning mb-1">ลงทะเบียนร่วมงาน</h2>
+      <p class="text-center text-white-50 mb-4">กรอกข้อมูลเพื่อรับตั๋วผีสิง 👻</p>
+
+      <form id="registerForm" action="process_register.php" method="POST">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อ-สกุล" required>
+          <label for="name" class="text-dark">ชื่อ-สกุล</label>
         </div>
 
-        <div class="form-group">
-          <label for="email">อีเมล</label>
-          <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+          <label for="email" class="text-dark">อีเมล</label>
         </div>
 
-        <div class="form-group">
-          <label for="phone">เบอร์โทรศัพท์</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="08xxxxxxxx" >
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="เบอร์โทรศัพท์"
+            pattern="[0-9]{10}">
+          <label for="phone" class="text-dark">เบอร์โทรศัพท์</label>
         </div>
-      
-        <div class="form-group">
-          <label for="ticket">ประเภทตั๋ว</label>
-          <select id="ticket" name="ticket" required>
-            <option value="" disabled selected>-- ประเภทตั๋ว --</option> 
+
+        <div class="form-floating mb-4">
+          <select class="form-select" id="ticket" name="ticket" required>
+            <option selected disabled value="">เลือกประเภทตั๋ว...</option>
             <option value="normal">General (ฟรี)</option>
-            <option value="vip conjuring">VIP The Conjuring ticket</option>
-            <option value="vip witchnesday">VIP Witchnesday ticket</option>
-            <option value="vip zoomAlone">VIP Zoom alone ticket</option>
+            <option value="vip_conjuring">VIP The Conjuring</option>
+            <option value="vip_witch">VIP Witchnesday</option>
           </select>
+          <label for="ticket" class="text-dark">ประเภทตั๋ว</label>
         </div>
 
-      <button type="submit">ลงทะเบียน</button>
-    </form>
+        <button type="submit" class="btn btn-halloween w-100 py-2 fs-5">ยืนยันการลงทะเบียน</button>
+      </form>
 
-    <p id="successMessage" class="success-message" style="display:none;">
-      ลงทะเบียนเรียบร้อย! กำลังพาไปยังหน้าหลัก 😊
-    </p>
+      <div id="successMessage" class="alert alert-success mt-3 text-center fw-bold" style="display: none;">
+        ✅ ลงทะเบียนเรียบร้อย! กำลังพาคุณไปหน้าแรก...
+      </div>
+    </div>
   </div>
-  
-  <footer>
-        <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
+
+  <footer class="text-center text-white-50">
+    <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
   </footer>
-<script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

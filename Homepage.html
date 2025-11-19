@@ -1,118 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Hall-o'-ween Party</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hall-o-ween.css">
 </head>
-<body class="body-homepage halloween-2022">
-    <header class="festival-header">
-        <div class="logo">Hall-o'-ween Party</div>
-        
-        <nav class="main-nav" id="mainNav">
-            <ul>
-                <li><a href="Homepage.html">Home</a></li>
-                <li><a href="Boothdirectorypage.html">Booths</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
 
-        <button class="hamburger-menu" id="hamburgerToggle" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-    </header>
-    
-<main class="home-main">
-    <section class="home-section-wrapper">
-        <div class="home-section">
-            <p class="home-news">NEWS</p>
-            <h1 class="home-title">Hall-o'-ween Party</h1>
-            <p class="home-history">รายละเอียด (detail)<span id="moreText" style="display: none;">
-            เทศกาลของกินต้อนรับฮาโลวีนกลับมาอีกครั้ง พร้อมเสิร์ฟความอร่อยและความหลอนในบรรยากาศสุดแฟนตาซี ภายในงานเต็มไปด้วยเมนูสุดครีเอท เช่น คัพเค้กผีตาโต
-            พายฟักทองแม่มด และน้ำผลไม้เลือดแวมไพร์สุดฮิต! ร้านค้าต่างแต่งสไตล์หลอนน่ารัก ให้คุณได้ถ่ายรูปลงโซเชียลแบบไม่ซ้ำใคร เสียงเพลงธีมฮาโลวีนและกลิ่นขนมอบหอมๆ
-            ชวนให้ทุกคนหลุดเข้าโลกแห่งเวทมนตร์ ทั้งเด็กและผู้ใหญ่ต่างพากันแต่งชุดแฟนซี มาสนุกกับกิจกรรม Trick or Treat กันอย่างคึกคัก อย่าลืมเตรียมท้องว่าง 
-            แล้วมาสัมผัสเทศกาลของกินสุดหลอนแสนอร่อยนี้ด้วยตัวคุณเอง 
-            </span>
-            <a href="javascript:void(0);" id="readMoreBtn" onclick="toggleReadMore()">อ่านเพิ่มเติม</a>
-            </p>
-            <a href="Boothdirectorypage.html" class="home-button">Explore All Booths</a>
+<body>
+
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">🎃 Hall-o'-ween</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Boothdirectorypage.html">Booths</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+
+                    <li class="nav-item ms-lg-2 border-start border-secondary d-none d-lg-block"></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_registrations.php">View Users</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="view_feedbacks.php">View Feedbacks</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-danger btn-sm rounded-pill px-3" href="index.html">
+                            Exit 🚪
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-5 pt-5 text-center">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="col-lg-8">
+                <span class="badge bg-warning text-dark mb-3 fs-6 shadow">NEWS UPDATE</span>
+                <h1 class="display-2 fw-bold mb-4 text-uppercase">Hall-o'-ween Party <span
+                        class="text-warning">2025</span></h1>
+
+                <div class="card custom-card p-4 mb-4 text-start mx-auto" style="max-width: 800px;">
+                    <h3 class="text-warning border-bottom pb-2 mb-3">รายละเอียดงาน (Details)</h3>
+                    <p class="mb-2 fs-5 text-white opacity-75 mb-0">
+                        เทศกาลของกินต้อนรับฮาโลวีนกลับมาอีกครั้ง! พบกับเมนูสุดหลอนแต่อร่อยล้ำ เช่น คัพเค้กผีตาโต
+                        พายแม่มด และน้ำเลือดแวมไพร์
+                        <span id="moreText" class="collapse">
+                            <br><br>
+                            บรรยากาศในงานเต็มไปด้วยความแฟนตาซี เสียงเพลงธีมฮาโลวีน และกลิ่นขนมอบหอมๆ
+                            ชวนให้ทุกคนหลุดเข้าโลกแห่งเวทมนตร์
+                            ทั้งเด็กและผู้ใหญ่ต่างพากันแต่งชุดแฟนซี มาสนุกกับกิจกรรม Trick or Treat กันอย่างคึกคัก
+                            อย่าลืมเตรียมท้องว่าง แล้วมาสัมผัสเทศกาลของกินสุดหลอนแสนอร่อยนี้ด้วยตัวคุณเอง!
+                        </span>
+                    </p>
+                    <button class="btn btn-sm btn-link text-warning text-decoration-none ps-0 fw-bold fs-6"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#moreText" aria-expanded="false">
+                        [ อ่านเพิ่มเติม / Read More ]
+                    </button>
+                </div>
+
+                <a href="Boothdirectorypage.html" class="btn btn-halloween btn-lg px-5 mt-3">👻 Explore All Booths</a>
+            </div>
         </div>
     </section>
 
-    <section class="wrapper">
-        <section class="image-gallery">
-            <img src="img/Festival image 1.jpg" alt="Festival image 1" class="home-image">
-        </section>
+    <section class="container mb-5">
+        <h2 class="text-center mb-4 text-warning">บรรยากาศภายในงาน</h2>
+        <div id="galleryCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg border border-secondary"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/Festival image 1.jpg" class="d-block w-100" alt="Festival 1"
+                        style="height: 500px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Festival image 2.jpg" class="d-block w-100" alt="Festival 2"
+                        style="height: 500px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/feeling1.jpg" class="d-block w-100" alt="Feeling 1"
+                        style="height: 500px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/feeling2.jpg" class="d-block w-100" alt="Feeling 2"
+                        style="height: 500px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/feeling3.jpg" class="d-block w-100" alt="Feeling 3"
+                        style="height: 500px; object-fit: cover;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+            </button>
+        </div>
     </section>
 
-    <section class="wrapper">
-        <section class="image-gallery">
-            <img src="img/Festival image 2.jpg" alt="Festival image 2" class="home-image">
-        </section>
+    <section class="container mb-5 pb-5">
+        <h2 class="text-center mb-5 display-5 text-warning">สมาชิกทีม (Our Team)</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">👑</div>
+                    <h5 class="mb-2 text-warning">ณัฐกรณ์ กล่อมแก้ว</h5>
+                    <p class="text-white opacity-75 mb-0">Team Lead</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">🧙‍♀️</div>
+                    <h5 class="mb-2 text-warning">ศุภาพิชญ์ แพมณี</h5>
+                    <p class="text-white opacity-75 mb-0">Product Owner / Developer</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">📋</div>
+                    <h5 class="mb-2 text-warning">กรรวี ลิมปิกาญจนโกวิท</h5>
+                    <p class="text-white opacity-75 mb-0">Project Manager / Developer</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">⏱️</div>
+                    <h5 class="mb-2 text-warning">นวพล วิสุนี</h5>
+                    <p class="text-white opacity-75 mb-0">Scrum Master / Developer</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">💻</div>
+                    <h5 class="mb-2 text-warning">ภีรพัฒน์ คงเนียม</h5>
+                    <p class="text-white opacity-75 mb-0">Developer</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">🐞</div>
+                    <h5 class="mb-2 text-warning">ธนกร นาคอินทร์แจ้ง</h5>
+                    <p class="text-white opacity-75 mb-0">Testers / Developer</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">📊</div>
+                    <h5 class="mb-2 text-warning">ภานพ ภู่โพล้ง</h5>
+                    <p class="text-white opacity-75 mb-0">Business Analyst / Developer</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">🎨</div>
+                    <h5 class="mb-2 text-warning">ชุติกาญจน์ จันสีชา</h5>
+                    <p class="text-white opacity-75 mb-0">Ux/Ui Designers</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">🏗️</div>
+                    <h5 class="mb-2 text-warning">ธนาพล เกิดปัญญา</h5>
+                    <p class="text-white opacity-75 mb-0">Software Architect</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="custom-card p-4 text-center h-100">
+                    <div class="fs-1 mb-3">✅</div>
+                    <h5 class="mb-2 text-warning">พิชชานันท์ กำลังพัฒนา</h5>
+                    <p class="text-white opacity-75 mb-0">QA Team / Developer</p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <div class="feeling">บรรยากาศเทศกาล</div>
-
-    <section class="wrapper">
-        <section class="image-gallery">
-            <img src="img/feeling1.jpg" alt="Festival image 3" class="home-image">
-            <img src="img/feeling2.jpg" alt="Festival image 4" class="home-image">
-            <img src="img/feeling3.jpg" alt="Festival image 5" class="home-image">
-        </section>
-    </section>
-
-    <h2 class="member">สมาชิกทีม</h2>
-    <div class="home-box-container">
-        <div class="home-box">
-            <p>Name : ภีรพัฒน์ คงเนียม</p>
-            <p>บทบาท : Developer</p>
-        </div>
-        <div class="home-box">
-            <p>Name : ศุภาพิชญ์ แพมณี</p>
-            <p>บทบาท : Product Owner/Developer</p>
-        </div>
-        <div class="home-box">
-            <p>Name : ณัฐกรณ์ กล่อมแก้ว</p>
-            <p>บทบาท : Team Lead</p>
-        </div>
-        <div class="home-box">
-            <p>Name : ธนกร นาคอินทร์แจ้ง</p>
-            <p>บทบาท : Testers/Developer</p>
-        </div>
-        <div class="home-box">
-            <p>Name : ภานพ ภู่โพล้ง</p>
-            <p>บทบาท : Business Analyst/Developer</p>
-        </div>
-        <div class="home-box">
-            <p>Name : กรรวี ลิมปิกาญจนโกวิท</p>
-            <p>บทบาท : Project Manager/Developer</p>
-        </div>
-        <div class="home-box">
-            <p>Name : ชุติกาญจน์ จันสีชา</p>
-            <p>บทบาท : Ux/Ui Designers</p>
-        </div>
-        <div class="home-box">
-            <p>Name : ธนาพล เกิดปัญญา</p>
-            <p>บทบาท : Software Architect</p>
-        </div>
-        <div class="home-box">
-            <p>Name : นวพล วิสุนี</p>
-            <p>บทบาท : Scrum Master/Developer</p>
-        </div>
-        <div class="home-box">
-            <p>Name : พิชชานันท์ กำลังพัฒนา</p>
-            <p>บทบาท : QA Team/Developer</p>
-        </div>
-    </div>
-</main>
-    <footer>
+    <footer class="text-center text-white-50 py-4">
         <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
