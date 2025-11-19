@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Mali:wght@400;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/the-halloween');
 
 :root {
     --primary-color: #ff7a18;
@@ -24,7 +25,16 @@ body {
     flex-direction: column;
 }
 
-/* --- Typography Readability Fix --- */
+.halloween {
+    font-family: 'The Halloween', sans-serif !important;
+    font-size: 40px;
+    letter-spacing: 2px; /* ฟอนต์นี้อาจจะต้องเพิ่มระยะห่างตัวอักษรนิดหน่อยให้อ่านง่ายขึ้น */
+    font-weight: normal; /* ฟอนต์แฟนซีมักจะหนาอยู่แล้ว อาจไม่ต้องใช้ bold */
+}
+.product {
+    padding-top: 20px;
+    font-size: 20px;
+}
 h1,
 h2,
 h3,
@@ -215,5 +225,27 @@ footer {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+/* สร้าง Class ใหม่เพื่อคุมรูปใน Carousel */
+.carousel-hero-img {
+    width: 100%;
+    height: 300px; /* ความสูงสำหรับมือถือ */
+    object-fit: cover; 
+    object-position: center; /* จัดให้รูปอยู่กึ่งกลางเสมอ ไม่ให้หัวคนหรือจุดเด่นถูกตัด */
+}
+
+/* สำหรับหน้าจอ Tablet หรือจอขนาดกลาง */
+@media (min-width: 768px) {
+    .carousel-hero-img {
+        height: 500px; 
+    }
+}
+
+/* สำหรับหน้าจอคอมพิวเตอร์ (จอใหญ่) ให้เพิ่มความสูง */
+@media (min-width: 1200px) {
+    .carousel-hero-img {
+        height: 750px; /* เพิ่มความสูงเพื่อให้สัดส่วนรูปสมดุลกับความกว้าง */
     }
 }
