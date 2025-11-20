@@ -246,19 +246,6 @@ footer {
     object-position: center; /* จัดให้รูปอยู่กึ่งกลางเสมอ ไม่ให้หัวคนหรือจุดเด่นถูกตัด */
 }
 
-/* สำหรับหน้าจอ Tablet หรือจอขนาดกลาง */
-@media (min-width: 768px) {
-    .carousel-hero-img {
-        height: 500px; 
-    }
-}
-
-/* สำหรับหน้าจอคอมพิวเตอร์ (จอใหญ่) ให้เพิ่มความสูง */
-@media (min-width: 1200px) {
-    .carousel-hero-img {
-        height: 750px; /* เพิ่มความสูงเพื่อให้สัดส่วนรูปสมดุลกับความกว้าง */
-    }
-}
 /* ✧ SPARKLES ✧ */
 .sparkle2 {
     position: absolute;
@@ -403,10 +390,31 @@ footer {
         60px 60px 0 rgba(255,255,255,0.12);
 }
 
-@media (max-width: 991px) { 
+@media (min-width: 1200px) {
+    .carousel-hero-img {
+        height: 750px; /* เพิ่มความสูงเพื่อให้สัดส่วนรูปสมดุลกับความกว้าง */
+    }
+}
+
+@media (max-width: 768px) { 
     h1.halloween {
         font-size: 2.5rem !important; 
         line-height: 1.4 !important;  
         word-wrap: break-word;       
+    }
+    .carousel-hero-img {
+        height: 500px; 
     }   
+}
+
+@media (max-width: 360px) {
+    h1.halloween {
+        /* ปรับลดขนาดลงมาอีกสำหรับจอมือถือ เพื่อไม่ให้ล้นจอ */
+        font-size: 1.8rem !important; 
+    }
+    
+    /* ปรับขนาดข้อความรอง (The Spookiest Party...) ให้สมดุลกันด้วย */
+    .welcome-title + h2 {
+        font-size: 1rem !important;
+    }
 }
