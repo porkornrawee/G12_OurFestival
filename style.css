@@ -404,6 +404,9 @@ footer {
     }
     .carousel-hero-img {
         height: 500px; 
+    }
+    .navbar-brand.halloween {
+        font-size: 30px; /* ลดจาก 40px เหลือ 30px ให้พอดีกับแท็บเล็ต */
     }   
 }
 
@@ -416,5 +419,10 @@ footer {
     /* ปรับขนาดข้อความรอง (The Spookiest Party...) ให้สมดุลกันด้วย */
     .welcome-title + h2 {
         font-size: 1rem !important;
+    }
+
+    .navbar-brand.halloween {
+        font-size: 22px; /* ลดเหลือ 22px เพื่อไม่ให้เบียดปุ่มเมนู (Hamburger menu) */
+        letter-spacing: 1px; /* ลดระยะห่างตัวอักษรลงเล็กน้อย */
     }
 }
