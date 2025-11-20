@@ -39,8 +39,6 @@ h5,
 h6 {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    /* เพิ่มเงาให้ตัวหนังสือเด้งออกมา */
     letter-spacing: 0.5px;
         text-shadow: 
         0 0 12px hsl(25, 100%, 50%),
