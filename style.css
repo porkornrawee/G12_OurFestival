@@ -605,3 +605,163 @@ footer {
         max-width: 300px;
     }
 }
+.blood-drip {
+    position: relative;
+}
+
+.blood-drip {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 40px; 
+}
+
+.blood-drip {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 90px; 
+}
+.blooddrink-page .horror-dust {
+    position: fixed;
+    width: 9px;
+    height: 9px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    animation: drift 6s infinite linear;
+    filter: blur(1px);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@keyframes drift {
+    0%   { transform: translateY(0) scale(1); opacity: 0.7; }
+    100% { transform: translateY(-100vh) scale(1.3); opacity: 0; }
+}
+.bat-wrapper {
+    position: fixed;
+    left: -250px;
+    width: 260px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+
+    animation: batMove 18s linear infinite;
+}
+
+
+.bat-float {
+    animation: batFloat 3s ease-in-out infinite;
+}
+
+
+.bat-wing {
+    width: 100%;
+    animation: batFlap 0.35s ease-in-out infinite;
+}
+
+
+.bat1 { top: 18%; animation-duration: 18s; animation-delay: 0s; }
+.bat2 { top: 32%; animation-duration: 22s; animation-delay: 4s; transform: scale(0.85); }
+.bat3 { top: 48%; animation-duration: 20s; animation-delay: 8s; transform: scale(1.1); }
+.bat4 { top: 63%; animation-duration: 25s; animation-delay: 2s; transform: scale(0.75); }
+
+
+@keyframes batMove {
+    0%   { opacity: 0; transform: translateX(-300px); }
+    10%  { opacity: 0.9; transform: translateX(150px); }
+    40%  { opacity: 1; transform: translateX(50vw); }
+    70%  { opacity: 0.6; transform: translateX(100vw); }
+    90%  { opacity: 0; transform: translateX(130vw); }
+    100% { opacity: 0; transform: translateX(-300px); }
+}
+
+
+@keyframes batFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+
+@keyframes batFlap {
+    0%   { transform: scaleY(1); }
+    50%  { transform: scaleY(1.12); }
+    100% { transform: scaleY(1); }
+}
+.web-page-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;         
+    opacity: 0.25;        
+    pointer-events: none; 
+    z-index: 9999;        
+}
+.vein-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 550px;
+    opacity: 0.32;
+    filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.5));
+    transform: scaleX(-1); /
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+}
+.blood-fog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(to top, rgba(150, 0, 0, 0.55), rgba(150, 0, 0, 0.2), transparent);
+    filter: blur(12px);
+    pointer-events: none;
+    z-index: 999;
+    animation: fogMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes fogMove {
+    0% { opacity: 0.35; transform: translateY(0); }
+    100% { opacity: 0.8; transform: translateY(-15px); }
+}
+.flash-light {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 1); 
+    opacity: 0;
+    z-index: 999999;
+    pointer-events: none;
+    animation: lightningStrong 12s infinite;
+}
+
+@keyframes lightningStrong {
+    0%, 85% { opacity: 0; }
+
+    
+    86% { opacity: 0.9; }  
+    87% { opacity: 0; }
+
+    
+    88% { opacity: 0.6; }
+    89% { opacity: 0; }
+
+   
+    90% { opacity: 0.75; }
+    91% { opacity: 0; }
+
+    
+    92% { opacity: 0.4; }
+    93% { opacity: 0; }
+
+    100% { opacity: 0; }
+}
+.container,
+.food-details-left,
+.food-details-right,
+.food-title,
+.food-subtitle,
+.food-description {
+    position: relative;
+    z-index: 50;
+}
