@@ -687,15 +687,7 @@ footer {
     50%  { transform: scaleY(1.12); }
     100% { transform: scaleY(1); }
 }
-.web-page-top-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;         
-    opacity: 0.25;        
-    pointer-events: none; 
-    z-index: 9999;        
-}
+     
 .vein-top-right {
     position: fixed;
     top: 0;
@@ -725,76 +717,15 @@ footer {
     0% { opacity: 0.35; transform: translateY(0); }
     100% { opacity: 0.8; transform: translateY(-15px); }
 }
-.flash-light {
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 1); 
-    opacity: 0;
-    z-index: 999999;
-    pointer-events: none;
-    animation: lightningStrong 12s infinite;
-}
-
-@keyframes lightningStrong {
-    0%, 85% { opacity: 0; }
-
-    
-    86% { opacity: 0.9; }  
-    87% { opacity: 0; }
-
-    
-    88% { opacity: 0.6; }
-    89% { opacity: 0; }
-
-   
-    90% { opacity: 0.75; }
-    91% { opacity: 0; }
-
-    
-    92% { opacity: 0.4; }
-    93% { opacity: 0; }
-
-    100% { opacity: 0; }
-}
 .container,
 .food-details-left,
 .food-details-right,
 .food-title,
 .food-subtitle,
-.food-description {
+.food-description,
+h1, h2, h3, h4, h5, h6 {
     position: relative;
-    z-index: 50;
-}
-@keyframes lightningFlash {
-    0%   { opacity: 0; }
-    5%   { opacity: 1; }
-    7%   { opacity: 0; }
-    12%  { opacity: 1; }
-    14%  { opacity: 0; }
-    18%  { opacity: 1; }
-    20%  { opacity: 0; }
-    35%  { opacity: 1; }
-    38%  { opacity: 0; }
-    100% { opacity: 0; }
+    z-index: 20; 
 }
 
-.lightning-effect {
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.2);
-    pointer-events: none;
-    z-index: 999999;
-    animation: lightningFlash 2.5s infinite;
-}
-@keyframes flashShake {
-    0% { transform: translate(0, 0); }
-    20% { transform: translate(-10px, 5px); }
-    40% { transform: translate(8px, -8px); }
-    60% { transform: translate(-6px, 4px); }
-    80% { transform: translate(4px, -4px); }
-    100% { transform: translate(0, 0); }
-}
 
-.flash-shake {
-    animation: flashShake 0.35s ease-in-out;
-}
