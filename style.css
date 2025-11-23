@@ -246,7 +246,7 @@ footer {
 
 /* ✧ SPARKLES ✧ */
 .sparkle2 {
-    position: absolute;
+    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
     width: 6px;
     height: 6px;
     background: radial-gradient(circle, #ffffff, transparent);
@@ -282,7 +282,7 @@ footer {
 
 /* 🕷️ แมงมุมตัวที่ 1 */
 .floating-spider {
-    position: absolute;
+    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
     top: 10%;
     left: 78%;
     font-size: 40px;
@@ -292,19 +292,19 @@ footer {
 
 @keyframes spiderFloat {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-25px); }
     100% { transform: translateY(0); }
 }
 
 @keyframes spiderSway {
     0% { transform: translateX(0) rotate(-3deg); }
-    100% { transform: translateX(-10px) rotate(3deg); }
+    100% { transform: translateX(-15px) rotate(3deg); }
 }
 
 /* 🕷️ แมงมุมตัวที่ 2 */
 .floating-spider2 {
-    position: absolute;
-    top: 47%;
+    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
+    top: 45%;
     left: 12%;
     font-size: 38px;
     z-index: 500;
@@ -315,24 +315,24 @@ footer {
 
 @keyframes spiderFloat2 {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } 
+    50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
 
 @keyframes spiderSway2 {
-    0% { transform: translateX(0) rotate(1deg); }  
-    100% { transform: translateX(5px) rotate(-1deg); } 
+    0% { transform: translateX(0) rotate(2deg); }
+    100% { transform: translateX(10px) rotate(-2deg); }
 }
 
 @keyframes spiderMoveSide {
     0% { left: 12%; }
-    50% { left: 15%; } 
+    50% { left: 18%; }
     100% { left: 12%; }
 }
 
 /* 🕸️ ใยแมงมุมมุมจอ */
 .web {
-    position: absolute;
+    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
     width: 160px;
     height: 160px;
     pointer-events: none;
@@ -695,7 +695,7 @@ footer {
     width: 550px;
     opacity: 0.32;
     filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.5));
-    transform: scaleX(-1); /
+    transform: scaleX(-1); 
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: screen;
@@ -727,5 +727,3 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 20; 
 }
-
-
