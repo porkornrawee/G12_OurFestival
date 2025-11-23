@@ -526,8 +526,10 @@ footer {
     font-weight: 600;
     color: #ffd700;
     text-shadow: 1px 1px 3px rgba(255,122,24,0.7), 0 0 5px rgba(142,68,173,0.5);
-    margin-bottom: 20px;
+    margin-top: 60px;    
+    margin-bottom: 18px;
 }
+
 
 .food-description {
     font-family: 'Mali', cursive;
