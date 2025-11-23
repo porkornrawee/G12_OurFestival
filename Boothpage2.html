@@ -120,7 +120,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="horror-dust" style="left:5%; bottom:-40px; animation-duration:12s;"></div>
+<div class="horror-dust" style="left:5%; bottom:-40px; animation-duration:12s;"></div>
 <div class="horror-dust" style="left:5%; bottom:0; animation-duration:12s;"></div>
 <div class="horror-dust" style="left:20%; bottom:0; animation-duration:9s;"></div>
 <div class="horror-dust" style="left:35%; bottom:0; animation-duration:11s;"></div>
@@ -137,22 +137,6 @@
 <div class="lightning-effect"></div>
 <div class="lightning-effect"></div>
 
-<script>
-setInterval(() => {
-    // เปิดแสงฟ้าผ่า
-    document.querySelector('.lightning-effect').style.opacity = '1';
-
-    // ทำให้หน้าจอสั่น
-    document.body.classList.add('flash-shake');
-
-    // ปิดแสง + หยุดสั่นหลัง 400ms
-    setTimeout(() => {
-        document.querySelector('.lightning-effect').style.opacity = '0';
-        document.body.classList.remove('flash-shake');
-    }, 400);
-
-}, 2000);
-</script>
 </body>
 
 

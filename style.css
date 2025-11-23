@@ -6,10 +6,8 @@
     --primary-hover: #ffb86b;
     --secondary-color: #8e44ad;
     --dark-bg: #0b0b10;
-    /* เปลี่ยนพื้นหลังการ์ดให้เป็นสีดำโปร่งแสง เพื่อให้อ่านตัวหนังสือสีขาวได้ง่ายขึ้น */
     --card-bg: rgba(0, 0, 0, 0.75);
     --text-main: #ffffff;
-    /* เปลี่ยนเป็นขาวจั๊วะ */
 }
 
 body {
@@ -21,8 +19,6 @@ body {
     background-attachment: fixed;
     color: var(--text-main);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .halloween {
@@ -280,59 +276,10 @@ footer {
     100% { transform: translate(0, 0); }
 }
 
-/* 🕷️ แมงมุมตัวที่ 1 */
-.floating-spider {
-    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
-    top: 10%;
-    left: 78%;
-    font-size: 40px;
-    z-index: 500;
-    animation: spiderFloat 6s infinite ease-in-out, spiderSway 3s infinite ease-in-out alternate;
-}
-
-@keyframes spiderFloat {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes spiderSway {
-    0% { transform: translateX(0) rotate(-3deg); }
-    100% { transform: translateX(-15px) rotate(3deg); }
-}
-
-/* 🕷️ แมงมุมตัวที่ 2 */
-.floating-spider2 {
-    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
-    top: 45%;
-    left: 12%;
-    font-size: 38px;
-    z-index: 500;
-    animation: spiderFloat2 7s infinite ease-in-out,
-               spiderSway2 4s infinite ease-in-out alternate,
-               spiderMoveSide 10s infinite linear;
-}
-
-@keyframes spiderFloat2 {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes spiderSway2 {
-    0% { transform: translateX(0) rotate(2deg); }
-    100% { transform: translateX(10px) rotate(-2deg); }
-}
-
-@keyframes spiderMoveSide {
-    0% { left: 12%; }
-    50% { left: 18%; }
-    100% { left: 12%; }
-}
 
 /* 🕸️ ใยแมงมุมมุมจอ */
 .web {
-    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
+    position: fixed;
     width: 160px;
     height: 160px;
     pointer-events: none;
@@ -728,4 +675,56 @@ footer {
 h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 20; 
+}
+
+.bat-wrapper {
+    position: fixed;
+    left: -250px;
+    width: 260px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+
+    animation: batMove 5s linear infinite;
+}
+
+
+.bat-float {
+    animation: batFloat 3s ease-in-out infinite;
+}
+
+
+.bat-wing {
+    width: 100%;
+    animation: batFlap 0.30s ease-in-out infinite;
+}
+
+
+.bat1 { top: 10%; animation-duration: 18s; animation-delay: 0s; }
+.bat2 { top: 32%; animation-duration: 22s; animation-delay: 4s; transform: scale(0.85); }
+.bat3 { top: 48%; animation-duration: 20s; animation-delay: 8s; transform: scale(1.1); }
+.bat4 { top: 63%; animation-duration: 25s; animation-delay: 2s; transform: scale(0.75); }
+
+
+@keyframes batMove {
+    0%   { opacity: 0; transform: translateX(-300px); }
+    10%  { opacity: 0.9; transform: translateX(150px); }
+    40%  { opacity: 1; transform: translateX(50vw); }
+    70%  { opacity: 0.6; transform: translateX(100vw); }
+    90%  { opacity: 0; transform: translateX(130vw); }
+    100% { opacity: 0; transform: translateX(-300px); }
+}
+
+
+@keyframes batFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+
+@keyframes batFlap {
+    0%   { transform: scaleY(1); }
+    50%  { transform: scaleY(1.12); }
+    100% { transform: scaleY(1); }
 }
