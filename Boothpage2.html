@@ -130,9 +130,29 @@
 <div class="bat-wrapper bat2"><div class="bat-float"><img src="img/bat.png" class="bat-wing"></div></div>
 <div class="bat-wrapper bat3"><div class="bat-float"><img src="img/bat.png" class="bat-wing"></div></div>
 <div class="bat-wrapper bat4"><div class="bat-float"><img src="img/bat.png" class="bat-wing"></div></div>
+<img src="img/spiderweb.png" class="web-page-top-left">
 <img src="img/vein.png" class="vein-top-right">
 <div class="blood-fog"></div>
+<div class="flash-light"></div>
+<div class="lightning-effect"></div>
+<div class="lightning-effect"></div>
 
+<script>
+setInterval(() => {
+    // เปิดแสงฟ้าผ่า
+    document.querySelector('.lightning-effect').style.opacity = '1';
+
+    // ทำให้หน้าจอสั่น
+    document.body.classList.add('flash-shake');
+
+    // ปิดแสง + หยุดสั่นหลัง 400ms
+    setTimeout(() => {
+        document.querySelector('.lightning-effect').style.opacity = '0';
+        document.body.classList.remove('flash-shake');
+    }, 400);
+
+}, 2000);
+</script>
 </body>
 
 
