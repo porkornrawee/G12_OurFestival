@@ -24,9 +24,12 @@ body {
 .halloween {
     font-family: 'The Halloween', sans-serif !important;
     font-size: 40px;
-    letter-spacing: 2px; /* ฟอนต์นี้อาจจะต้องเพิ่มระยะห่างตัวอักษรนิดหน่อยให้อ่านง่ายขึ้น */
-    font-weight: normal; /* ฟอนต์แฟนซีมักจะหนาอยู่แล้ว อาจไม่ต้องใช้ bold */
+    letter-spacing: 2px;
+    /* ฟอนต์นี้อาจจะต้องเพิ่มระยะห่างตัวอักษรนิดหน่อยให้อ่านง่ายขึ้น */
+    font-weight: normal;
+    /* ฟอนต์แฟนซีมักจะหนาอยู่แล้ว อาจไม่ต้องใช้ bold */
 }
+
 h1,
 h2,
 h3,
@@ -36,17 +39,18 @@ h6 {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
     letter-spacing: 0.5px;
-        text-shadow: 
+    text-shadow:
         0 0 12px hsl(25, 100%, 50%),
         0 0 25px rgba(255, 0, 0, 0.8),
         0 0 40px rgba(119, 98, 86, 0.6);
     /* glowing brand text */
 }
+
 h6:hover {
     transform: translateY(-3px);
     text-shadow:
         0 0 14px #ff7a18,
-        0 0 30px rgba(255,122,24,0.8),
+        0 0 30px rgba(255, 122, 24, 0.8),
         0 0 45px rgba(102, 45, 15, 0.6);
     transition: transform 0.25s ease, text-shadow 0.25s ease;
 }
@@ -235,14 +239,17 @@ footer {
 /* สร้าง Class ใหม่เพื่อคุมรูปใน Carousel */
 .carousel-hero-img {
     width: 100%;
-    height: 300px; /* ความสูงสำหรับมือถือ */
-    object-fit: cover; 
-    object-position: center; /* จัดให้รูปอยู่กึ่งกลางเสมอ ไม่ให้หัวคนหรือจุดเด่นถูกตัด */
+    height: 300px;
+    /* ความสูงสำหรับมือถือ */
+    object-fit: cover;
+    object-position: center;
+    /* จัดให้รูปอยู่กึ่งกลางเสมอ ไม่ให้หัวคนหรือจุดเด่นถูกตัด */
 }
 
 /* ✧ SPARKLES ✧ */
 .sparkle2 {
-    position: fixed; /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
+    position: absolute;
+    /* แก้ไข: เปลี่ยนเป็น fixed เพื่อให้อยู่คงที่บน viewport */
     width: 6px;
     height: 6px;
     background: radial-gradient(circle, #ffffff, transparent);
@@ -253,33 +260,101 @@ footer {
 }
 
 /* ตำแหน่ง sparkles — ปรับให้ไม่ชนแมงมุม */
-.sparkle2:nth-child(1) { top: 12%; left: 10%; animation-delay: 0s; }
-.sparkle2:nth-child(2) { top: 25%; left: 50%; animation-delay: 0.5s; }
-.sparkle2:nth-child(3) { top: 45%; left: 20%; animation-delay: 1s; }
-.sparkle2:nth-child(4) { top: 70%; left: 85%; animation-delay: 1.5s; }
-.sparkle2:nth-child(5) { top: 40%; left: 30%; animation-delay: 2s; }
-.sparkle2:nth-child(6) { top: 18%; left: 70%; animation-delay: 2.5s; }
-.sparkle2:nth-child(7) { top: 60%; left: 45%; animation-delay: 3s; }
-.sparkle2:nth-child(8) { top: 82%; left: 20%; animation-delay: 3.5s; }
-.sparkle2:nth-child(9) { top: 12%; left: 90%; animation-delay: 4s; }
-.sparkle2:nth-child(10) { top: 55%; left: 65%; animation-delay: 4.5s; }
+.sparkle2:nth-child(1) {
+    top: 12%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.sparkle2:nth-child(2) {
+    top: 25%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.sparkle2:nth-child(3) {
+    top: 45%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.sparkle2:nth-child(4) {
+    top: 70%;
+    left: 85%;
+    animation-delay: 1.5s;
+}
+
+.sparkle2:nth-child(5) {
+    top: 40%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.sparkle2:nth-child(6) {
+    top: 18%;
+    left: 70%;
+    animation-delay: 2.5s;
+}
+
+.sparkle2:nth-child(7) {
+    top: 60%;
+    left: 45%;
+    animation-delay: 3s;
+}
+
+.sparkle2:nth-child(8) {
+    top: 82%;
+    left: 20%;
+    animation-delay: 3.5s;
+}
+
+.sparkle2:nth-child(9) {
+    top: 12%;
+    left: 90%;
+    animation-delay: 4s;
+}
+
+.sparkle2:nth-child(10) {
+    top: 55%;
+    left: 65%;
+    animation-delay: 4.5s;
+}
 
 @keyframes sparkleBlink {
-    0% { opacity: 0.2; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1.3); }
-    100% { opacity: 0.2; transform: scale(0.6); }
+    0% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(0.6);
+    }
 }
 
 @keyframes sparkleDrift {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(10px, -20px); }
-    100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 
 /* 🕸️ ใยแมงมุมมุมจอ */
 .web {
-    position: fixed;
+    position: absolute;
     width: 160px;
     height: 160px;
     pointer-events: none;
@@ -291,7 +366,7 @@ footer {
 .web::after {
     content: "";
     position: absolute;
-    border: 1px solid rgba(255,255,255,0.35);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -330,45 +405,69 @@ footer {
 /* เส้นใยลึกเข้าไปข้างใน */
 .web::before {
     box-shadow:
-        20px 20px 0 rgba(255,255,255,0.2),
-        40px 40px 0 rgba(255,255,255,0.15),
-        60px 60px 0 rgba(255,255,255,0.12);
+        20px 20px 0 rgba(255, 255, 255, 0.2),
+        40px 40px 0 rgba(255, 255, 255, 0.15),
+        60px 60px 0 rgba(255, 255, 255, 0.12);
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1024px) {
     .carousel-hero-img {
-        height: 750px; /* เพิ่มความสูงเพื่อให้สัดส่วนรูปสมดุลกับความกว้าง */
+        height: 750px;
+        /* เพิ่มความสูงเพื่อให้สัดส่วนรูปสมดุลกับความกว้าง */
+    }
+
+    .web {
+        width: 75px;
+        /* ลดขนาดลงจาก 160px */
+        height: 75px;
     }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     h1.halloween {
-        font-size: 2.5rem !important; 
-        line-height: 1.4 !important;  
-        word-wrap: break-word;       
+        font-size: 2.5rem !important;
+        line-height: 1.4 !important;
+        word-wrap: break-word;
     }
+
     .carousel-hero-img {
-        height: 500px; 
+        height: 500px;
     }
+
     .navbar-brand.halloween {
-        font-size: 30px; /* ลดจาก 40px เหลือ 30px ให้พอดีกับแท็บเล็ต */
-    }   
+        font-size: 30px;
+        /* ลดจาก 40px เหลือ 30px ให้พอดีกับแท็บเล็ต */
+    }
 }
 
 @media (max-width: 360px) {
     h1.halloween {
         /* ปรับลดขนาดลงมาอีกสำหรับจอมือถือ เพื่อไม่ให้ล้นจอ */
-        font-size: 1.8rem !important; 
+        font-size: 1.8rem !important;
     }
-    
+
     /* ปรับขนาดข้อความรอง (The Spookiest Party...) ให้สมดุลกันด้วย */
-    .welcome-title + h2 {
+    .welcome-title+h2 {
         font-size: 1rem !important;
     }
 
     .navbar-brand.halloween {
-        font-size: 22px; /* ลดเหลือ 22px เพื่อไม่ให้เบียดปุ่มเมนู (Hamburger menu) */
-        letter-spacing: 1px; /* ลดระยะห่างตัวอักษรลงเล็กน้อย */
+        font-size: 22px;
+        /* ลดเหลือ 22px เพื่อไม่ให้เบียดปุ่มเมนู (Hamburger menu) */
+        letter-spacing: 1px;
+        /* ลดระยะห่างตัวอักษรลงเล็กน้อย */
+    }
+
+    .web {
+        width: 80px;
+        /* ลดขนาดลงอีก */
+        height: 80px;
+        opacity: 0.3;
+        /* ลดความเข้มลงหน่อยจะได้ไม่บังตัวหนังสือ */
+    }
+
+    .web-section {
+        overflow: hidden;
     }
 }
 
@@ -399,6 +498,7 @@ footer {
     animation-delay: 0s;
     animation-duration: 7s;
 }
+
 .pumpkin-2 {
     left: 70%;
     top: -180px;
@@ -406,6 +506,7 @@ footer {
     animation-duration: 9s;
     transform: scale(0.8) rotate(10deg);
 }
+
 .pumpkin-3 {
     left: 40%;
     top: -70px;
@@ -413,6 +514,7 @@ footer {
     animation-duration: 6s;
     transform: scale(1.1) rotate(-5deg);
 }
+
 .pumpkin-4 {
     left: 25%;
     top: -220px;
@@ -420,6 +522,7 @@ footer {
     animation-duration: 8s;
     transform: scale(0.9) rotate(20deg);
 }
+
 .pumpkin-5 {
     left: 85%;
     top: -100px;
@@ -434,6 +537,7 @@ footer {
         transform: translateY(-150px) rotate(0deg);
         opacity: 0.9;
     }
+
     100% {
         transform: translateY(calc(100vh + 150px)) rotate(360deg);
         opacity: 0.2;
@@ -443,9 +547,9 @@ footer {
 .row.g-4.justify-content-center {
     position: relative;
     padding: 50px 20px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
 }
 
@@ -454,10 +558,10 @@ footer {
     padding: 30px;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     animation: float 6s ease-in-out infinite;
 }
-/*แก้สีด้วยโว้ยยยย*/
+
 .food-title {
     font-family: 'The Halloween', sans-serif;
     font-size: 3rem;
@@ -465,15 +569,14 @@ footer {
     text-shadow: 0 0 10px #f5bb26, 0 0 20px rgba(144, 161, 94, 0.7), 0 0 30px rgba(224, 153, 106, 0.5);
     margin-bottom: 15px;
 }
-/*แก้สีด้วยโว้ยยยย*/
 
 .food-subtitle {
     font-family: 'Mali', cursive;
     font-size: 1.5rem;
     font-weight: 600;
     color: #ffd700;
-    text-shadow: 1px 1px 3px rgba(255,122,24,0.7), 0 0 5px rgba(142,68,173,0.5);
-    margin-top: 60px;    
+    text-shadow: 1px 1px 3px rgba(255, 122, 24, 0.7), 0 0 5px rgba(142, 68, 173, 0.5);
+    margin-top: 60px;
     margin-bottom: 18px;
 }
 
@@ -483,25 +586,36 @@ footer {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(142,68,173,0.5), 1px 1px 4px rgba(255,122,24,0.3);
+    text-shadow: 1px 1px 2px rgba(142, 68, 173, 0.5), 1px 1px 4px rgba(255, 122, 24, 0.3);
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @media (max-width: 768px) {
     .food-details-left {
         padding: 20px;
     }
+
     .food-title {
         font-size: 2rem;
     }
+
     .food-subtitle {
         font-size: 1.2rem;
     }
+
     .food-description {
         font-size: 1rem;
     }
@@ -509,11 +623,11 @@ footer {
 
 .food-details-right {
     position: relative;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 20px;
     border: 1px solid rgba(255, 122, 24, 0.3);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -529,31 +643,52 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(224, 193, 137, 0.5), 0 0 50px rgba(142,68,173,0.3);
+    box-shadow: 0 0 30px rgba(224, 193, 137, 0.5), 0 0 50px rgba(142, 68, 173, 0.3);
     animation: logoGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes logoGlow {
-    0% { transform: scale(1); filter: drop-shadow(0 0 5px #000000); }
-    50% { transform: scale(1.02); filter: drop-shadow(0 0 20px #000000); }
-    100% { transform: scale(1); filter: drop-shadow(0 0 5px #000000); }
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #000000);
+    }
+
+    50% {
+        transform: scale(1.02);
+        filter: drop-shadow(0 0 20px #000000);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #000000);
+    }
 }
 
 @media (max-width: 768px) {
     .food-details-right {
         padding: 20px;
     }
+
     .food-main-logo {
         width: 100%;
         max-width: 300px;
     }
 }
+
 .blood-drip {
     position: relative;
 }
@@ -561,14 +696,15 @@ footer {
 .blood-drip {
     position: relative;
     display: inline-block;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
 }
 
 .blood-drip {
     position: relative;
     display: inline-block;
-    padding-bottom: 90px; 
+    padding-bottom: 90px;
 }
+
 .blooddrink-page .horror-dust {
     position: fixed;
     width: 9px;
@@ -582,61 +718,17 @@ footer {
 }
 
 @keyframes drift {
-    0%   { transform: translateY(0) scale(1); opacity: 0.7; }
-    100% { transform: translateY(-100vh) scale(1.3); opacity: 0; }
-}
-.bat-wrapper {
-    position: fixed;
-    left: -250px;
-    width: 260px;
-    pointer-events: none;
-    z-index: 5;
-    opacity: 0;
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
 
-    animation: batMove 18s linear infinite;
+    100% {
+        transform: translateY(-100vh) scale(1.3);
+        opacity: 0;
+    }
 }
 
-
-.bat-float {
-    animation: batFloat 3s ease-in-out infinite;
-}
-
-
-.bat-wing {
-    width: 100%;
-    animation: batFlap 0.35s ease-in-out infinite;
-}
-
-
-.bat1 { top: 18%; animation-duration: 18s; animation-delay: 0s; }
-.bat2 { top: 32%; animation-duration: 22s; animation-delay: 4s; transform: scale(0.85); }
-.bat3 { top: 48%; animation-duration: 20s; animation-delay: 8s; transform: scale(1.1); }
-.bat4 { top: 63%; animation-duration: 25s; animation-delay: 2s; transform: scale(0.75); }
-
-
-@keyframes batMove {
-    0%   { opacity: 0; transform: translateX(-300px); }
-    10%  { opacity: 0.9; transform: translateX(150px); }
-    40%  { opacity: 1; transform: translateX(50vw); }
-    70%  { opacity: 0.6; transform: translateX(100vw); }
-    90%  { opacity: 0; transform: translateX(130vw); }
-    100% { opacity: 0; transform: translateX(-300px); }
-}
-
-
-@keyframes batFloat {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-}
-
-
-@keyframes batFlap {
-    0%   { transform: scaleY(1); }
-    50%  { transform: scaleY(1.12); }
-    100% { transform: scaleY(1); }
-}
-     
 .vein-top-right {
     position: fixed;
     top: 0;
@@ -644,11 +736,12 @@ footer {
     width: 550px;
     opacity: 0.32;
     filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.5));
-    transform: scaleX(-1); 
+    transform: scaleX(-1);
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: screen;
 }
+
 .blood-fog {
     position: fixed;
     bottom: 0;
@@ -663,18 +756,31 @@ footer {
 }
 
 @keyframes fogMove {
-    0% { opacity: 0.35; transform: translateY(0); }
-    100% { opacity: 0.8; transform: translateY(-15px); }
+    0% {
+        opacity: 0.35;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateY(-15px);
+    }
 }
+
 .container,
 .food-details-left,
 .food-details-right,
 .food-title,
 .food-subtitle,
 .food-description,
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     position: relative;
-    z-index: 20; 
+    z-index: 20;
 }
 
 .bat-wrapper {
@@ -700,31 +806,92 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.bat1 { top: 10%; animation-duration: 18s; animation-delay: 0s; }
-.bat2 { top: 32%; animation-duration: 22s; animation-delay: 4s; transform: scale(0.85); }
-.bat3 { top: 48%; animation-duration: 20s; animation-delay: 8s; transform: scale(1.1); }
-.bat4 { top: 63%; animation-duration: 25s; animation-delay: 2s; transform: scale(0.75); }
+.bat1 {
+    top: 10%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+
+.bat2 {
+    top: 32%;
+    animation-duration: 22s;
+    animation-delay: 4s;
+    transform: scale(0.85);
+}
+
+.bat3 {
+    top: 48%;
+    animation-duration: 20s;
+    animation-delay: 8s;
+    transform: scale(1.1);
+}
+
+.bat4 {
+    top: 63%;
+    animation-duration: 25s;
+    animation-delay: 2s;
+    transform: scale(0.75);
+}
 
 
 @keyframes batMove {
-    0%   { opacity: 0; transform: translateX(-300px); }
-    10%  { opacity: 0.9; transform: translateX(150px); }
-    40%  { opacity: 1; transform: translateX(50vw); }
-    70%  { opacity: 0.6; transform: translateX(100vw); }
-    90%  { opacity: 0; transform: translateX(130vw); }
-    100% { opacity: 0; transform: translateX(-300px); }
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    10% {
+        opacity: 0.9;
+        transform: translateX(150px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateX(50vw);
+    }
+
+    70% {
+        opacity: 0.6;
+        transform: translateX(100vw);
+    }
+
+    90% {
+        opacity: 0;
+        transform: translateX(130vw);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
 }
 
 
 @keyframes batFloat {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
 @keyframes batFlap {
-    0%   { transform: scaleY(1); }
-    50%  { transform: scaleY(1.12); }
-    100% { transform: scaleY(1); }
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.12);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
 }
