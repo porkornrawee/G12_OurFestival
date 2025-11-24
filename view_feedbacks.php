@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <nav class="navbar navbar-dark sticky-top">
         <div class="container">
@@ -38,10 +38,6 @@
         </div>
     </nav>
 
-    <footer class="fixed-bottom text-center text-white-50 py-3">
-        <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
-    </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
@@ -92,6 +88,9 @@
             ?>
         </div>
     </div>
+    <footer class="text-center text-white-50 border-top border-dark">
+        <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

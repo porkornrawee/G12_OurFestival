@@ -19,6 +19,8 @@ body {
     background-attachment: fixed;
     color: var(--text-main);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .halloween {
@@ -409,13 +411,13 @@ footer {
         40px 40px 0 rgba(255, 255, 255, 0.15),
         60px 60px 0 rgba(255, 255, 255, 0.12);
 }
-
-@media (max-width: 1024px) {
+@media (min-width: 1200px) {
     .carousel-hero-img {
         height: 750px;
-        /* เพิ่มความสูงเพื่อให้สัดส่วนรูปสมดุลกับความกว้าง */
     }
+}
 
+@media (max-width: 1024px) {
     .web {
         width: 75px;
         /* ลดขนาดลงจาก 160px */
