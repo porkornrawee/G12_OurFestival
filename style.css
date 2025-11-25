@@ -411,6 +411,10 @@ footer {
         40px 40px 0 rgba(255, 255, 255, 0.15),
         60px 60px 0 rgba(255, 255, 255, 0.12);
 }
+
+.img-fluid {
+        height: 700px;
+}
 @media (min-width: 1200px) {
     .carousel-hero-img {
         height: 750px;
@@ -422,6 +426,9 @@ footer {
         width: 75px;
         /* ลดขนาดลงจาก 160px */
         height: 75px;
+    }
+    .img-fluid {
+        height: 350px;
     }
 }
 
@@ -571,7 +578,6 @@ footer {
     text-shadow: 0 0 10px #462c19, 0 0 20px rgba(0, 0, 0, 0.7), 0 0 30px rgb(255, 245, 50);
     margin-bottom: 15px;
 }
-/*แก้สีด้วยโว้ยยยย*/
 
 .food-subtitle {
     font-family: 'Mali', cursive;
